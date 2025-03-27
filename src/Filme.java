@@ -3,11 +3,15 @@ public class Filme {
     String nomeFilme;
     int anoDeLancamento;
     boolean incluidoNoPlano;
-    double somaDasAvaliacoes;
-    int totalAvaliacoes;
+    private double somaDasAvaliacoes; //modificador de acesso - private restringe que o atributo seja modificado
+    private int totalAvaliacoes;
     int duracaoEmMinutos;
 
     //Metodos: função dentro da classe
+
+    int getTotalAvaliacoes(){
+        return totalAvaliacoes;
+    } //metodo acessor - para devolver o valor de um atributo privado
 
     void exibeFichaTecnica(){
         System.out.println("Título: " + nomeFilme);
