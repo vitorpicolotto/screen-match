@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 import screenmatch.calculos.CalculadoraDeTempo;
 import screenmatch.calculos.FiltroRecomendacao;
 import screenmatch.modelos.Episodio;
@@ -15,6 +17,20 @@ public class Principal {
         meuFilme.avalia(8);
         meuFilme.avalia(10);
         meuFilme.avalia(9);
+
+        Filme novoFilme = new Filme();
+        novoFilme.setNomeFilme("Alta Fidelidade");
+        novoFilme.setDuracaoEmMinutos(100);
+        novoFilme.setAnoDeLancamento(2000);
+        novoFilme.avalia(10);
+
+        ArrayList <Filme> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(meuFilme);
+        listaDeFilmes.add(novoFilme);
+        System.out.println("Tamanho da lista: " + listaDeFilmes.size());
+        System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getNomeFilme());
+        System.out.println(listaDeFilmes);
+
 
         System.out.println("Total de avaliações: " +meuFilme.getTotalAvaliacoes());
         System.out.println("Média das avaliações: " + meuFilme.pegaMedia());
