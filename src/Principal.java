@@ -8,9 +8,9 @@ import screenmatch.modelos.Serie;
 
 public class Principal {
     public static void main(String[] args) {
-        Filme meuFilme = new Filme();
-        meuFilme.setNomeFilme("Harry Potter e a Pedra Filosofal");
-        meuFilme.setAnoDeLancamento(2001);
+        Filme meuFilme = new Filme("Harry Potter e a Pedra Filosofal", 2001);
+        //meuFilme.setNomeFilme("Harry Potter e a Pedra Filosofal");
+        //meuFilme.setAnoDeLancamento(2001);
         meuFilme.setDuracaoEmMinutos(142);
 
         meuFilme.exibeFichaTecnica();
@@ -18,10 +18,10 @@ public class Principal {
         meuFilme.avalia(10);
         meuFilme.avalia(9);
 
-        Filme novoFilme = new Filme();
-        novoFilme.setNomeFilme("Alta Fidelidade");
+        Filme novoFilme = new Filme("Alta Fidelidade", 2000);
+        //novoFilme.setNomeFilme("Alta Fidelidade");
         novoFilme.setDuracaoEmMinutos(100);
-        novoFilme.setAnoDeLancamento(2000);
+        //novoFilme.setAnoDeLancamento(2000);
         novoFilme.avalia(10);
 
         ArrayList <Filme> listaDeFilmes = new ArrayList<>();
@@ -29,16 +29,16 @@ public class Principal {
         listaDeFilmes.add(novoFilme);
         System.out.println("Tamanho da lista: " + listaDeFilmes.size());
         System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getNomeFilme());
-        System.out.println(listaDeFilmes);
+        System.out.print(listaDeFilmes.toString());
 
 
-        System.out.println("Total de avaliações: " +meuFilme.getTotalAvaliacoes());
+        System.out.println("Total de avaliações: " + meuFilme.getTotalAvaliacoes());
         System.out.println("Média das avaliações: " + meuFilme.pegaMedia());
 
         //exemplo de herança
-        Serie theWire = new Serie();
-        theWire.setNomeFilme("The Wire");
-        theWire.setAnoDeLancamento(2000);
+        Serie theWire = new Serie("The Wire", 2000);
+        // theWire.setNomeFilme("The Wire");
+        // theWire.setAnoDeLancamento(2000);
         theWire.exibeFichaTecnica();
         theWire.setTemporadas(5);
         theWire.setMinutosPorEpisodio(60);

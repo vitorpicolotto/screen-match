@@ -9,6 +9,14 @@ public class Titulo {
     private int totalAvaliacoes;
     private int duracaoEmMinutos;
 
+
+    //construtor
+     public Titulo(String nomeFilme, int anoDeLancamento) {
+        this.nomeFilme = nomeFilme;
+        this.anoDeLancamento = anoDeLancamento;
+    }
+
+
     //Metodos: função dentro da classe
 
     public int getTotalAvaliacoes(){
