@@ -1,6 +1,6 @@
 package screenmatch.modelos;
 
-public class Titulo {
+public class Titulo implements Comparable<Titulo> {
     //atributos guardados dentro do objeto (encapsulamento?)
     private String nomeFilme;
     private int anoDeLancamento;
@@ -15,7 +15,6 @@ public class Titulo {
         this.nomeFilme = nomeFilme;
         this.anoDeLancamento = anoDeLancamento;
     }
-
 
     //Metodos: função dentro da classe
 
@@ -67,5 +66,11 @@ public class Titulo {
 
     public double pegaMedia(){
         return somaDasAvaliacoes / totalAvaliacoes;
+    }
+
+
+    @Override
+    public int compareTo(Titulo outrTitulo) {
+        return this.getNomeFilme().compareTo(outrTitulo.getNomeFilme());
     }
 }
